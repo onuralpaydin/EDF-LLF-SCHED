@@ -4,15 +4,15 @@
 // Görev yapısını tanımlama
 typedef struct
 {
-    int task_id;          // Görev numarasý
-    int execution_time;   // Çalýþma süresi
+    int task_id;          // Görev numarası
+    int execution_time;   // çalışma süresi
     int period;           // Periyod
     int deadline;         // Mevcut deadline
-    int remaining_time;   // Kalan çalýþma süresi
-    int next_arrival;     // Bir sonraki gelme zamaný
+    int remaining_time;   // Kalan çalışma süresi
+    int next_arrival;     // Bir sonraki gelme zamanı
 } Task;
 
-// LLF Zamanlama Algoritmasý
+// LLF Zamanlama Algoritması
 void llf_scheduler(Task tasks[], int n, int simulation_time)
 {
     printf("\nLLF Schedule:\n");
@@ -37,7 +37,7 @@ void llf_scheduler(Task tasks[], int n, int simulation_time)
             }
         }
 
-        // Eðer hiçbir görev çalışmaya hazır değilse
+        // Eğer hiçbir görev çalışmaya hazır değilse
         if (selected_task == -1)
         {
             printf("%d-%d: Idle\n", time, time + 1);
